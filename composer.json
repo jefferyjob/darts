@@ -11,10 +11,17 @@
   ],
   "autoload": {
     "psr-4": {
-      "App\\": "app",
-      "Bin\\": "bin"
+      "App\\": "app"
+    }
+  },
+  "repositories": {
+    "dartswoole": {
+      "type": "path",
+      "url": "../dartswoole"
     }
   },
   "minimum-stability": "dev",
-  "require": {}
+  "require": {
+    "jefferyjob/dartswoole": "dev-master"
+  }
 }

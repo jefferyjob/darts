@@ -1,4 +1,4 @@
 <?php
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-(new \Bin\kernel\Kernel())->run($argv);
+(new \Dartswoole\App\Application())->run($argv);
