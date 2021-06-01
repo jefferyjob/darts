@@ -1,0 +1,20 @@
+{
+  "name": "jefferyjob/darts",
+  "description": "Darts Framework",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "libin",
+      "email": "libinjob@163.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app",
+      "Bin\\": "bin"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {}
+}
