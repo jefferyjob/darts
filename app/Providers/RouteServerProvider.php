@@ -19,7 +19,7 @@ class RouteServerProvider extends ServerProvider
     public function mapRouteHttp()
     {
         $this->map['http'] = array(
-            'namespace' => 'App\Http\Controller',
+            'namespace' => 'App\Controllers',
             'path' => $this->app->getBasePath()."/route/http.php",
             'flag' => 'http'
         );
@@ -31,7 +31,7 @@ class RouteServerProvider extends ServerProvider
     public function mapRouteWs()
     {
         $this->map['ws'] = array(
-            'namespace' => 'App\Http\Controller',
+            'namespace' => 'App\Controllers',
             'path' => $this->app->getBasePath()."/route/ws.php",
             'flag' => 'ws'
         );

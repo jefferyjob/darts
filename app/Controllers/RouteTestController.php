@@ -13,7 +13,7 @@ class RouteTestController
      */
     public function index()
     {
-        echo "RouteTestController---index";
+        return "RouteTestController---index";
     }
 
     /**
