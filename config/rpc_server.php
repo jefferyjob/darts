@@ -14,7 +14,7 @@ return array(
     'host' => '127.0.0.1',
 
     // 端口定义
-    'port' => 8500,
+    'port' => 9600,
 
     // swoole 相关配置
     'swoole' => [

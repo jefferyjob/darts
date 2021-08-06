@@ -2,11 +2,11 @@
 
 ## 概述
 
-该框架基于是基于 swoole 对于 swoole 一些原生功能的实现
+Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
 ## 目录简介
 
-```
+```text
 app  
 ----------Controller--------------控制器     
 ----------Providers---------------引擎加载    

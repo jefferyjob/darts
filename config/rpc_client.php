@@ -7,6 +7,6 @@ return array(
     // rpc服务配置
     'test' => [
         "host" => "127.0.0.1",
-        "port" => 8500
+        "port" => 9600
     ],
 );
