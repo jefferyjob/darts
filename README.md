@@ -4,7 +4,7 @@
 
 该框架基于是基于 swoole 对于 swoole 一些原生功能的实现
 
-# 目录简介
+## 目录简介
 
 ```
 app  
@@ -31,10 +31,10 @@ vendor
 ----------xxxxxx------------------扩展  
 ```
 
-# question
+## question
 
-## 如何测试RPC服务
+### 如何测试RPC服务
 
 - 重新复制一份此项目作为客户端项目
-- 在 config/http_server.php 中修改 prot 端口
+- 在 config/http_server.php 中修改 port 端口
 - 在 config/rpc_server.php 中关闭 rpc 服务
