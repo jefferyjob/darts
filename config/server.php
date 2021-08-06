@@ -1,4 +1,7 @@
 <?php
+/**
+ * 配置 rpc 服务端的相关配置
+ */
 return array(
 
     /**
