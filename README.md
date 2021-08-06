@@ -31,6 +31,11 @@ vendor
 ----------xxxxxx------------------扩展  
 ```
 
+## 初次安装
+
+- 请先将Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 darts 项目的同级目录
+- 然后执行 composer update 安装 dartswoole 扩展
+
 ## Question
 
 ### 如何测试RPC服务
