@@ -21,7 +21,7 @@ class RouteTestController
      */
     public function get()
     {
-        echo "RouteTestController---get";
+        return "RouteTestController---get";
     }
 
     /**
@@ -29,6 +29,6 @@ class RouteTestController
      */
     public function post()
     {
-        echo "RouteTestController---post";
+        return "RouteTestController---post";
     }
 }
