@@ -4,6 +4,11 @@
 
 Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
+## 环境要求
+
+- php-7.2 或更高版本
+- swoole-4.6 或更高版本
+
 ## 初次安装
 
 - 请先将 Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 `darts` 项目的同级目录
