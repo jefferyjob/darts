@@ -2,6 +2,8 @@
 namespace App;
 
 use Dartswoole\Event\Listener;
+use Dartswoole\Help\Debug;
+use Swoole\Coroutine;
 
 class StopListener extends Listener
 {
@@ -11,5 +13,27 @@ class StopListener extends Listener
     public function handler($dartServer, $swooleServer)
     {
         var_dump("this is  stop --- listener handler");
+
+        Coroutine::create(function (){
+            $this->deregisterService();
+        });
+    }
+
+    /**
+     * 注销 consul 服务
+     */
+    public function deregisterService()
+    {
+        // 获取 consul 服务
+        $consul = $this->app->make('consul-agent');
+
+        // 获取 consul 配置信息
+        $config = $this->app->make('config')->get('consul.service');
+
+        // 注册 consul 服务
+        $consul->deregisterService($config['ID']);
+
+        // echo
+        Debug::info('注销注销注销 consul 服务');
     }
 }

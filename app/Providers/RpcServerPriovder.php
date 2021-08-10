@@ -1,9 +1,10 @@
 <?php
 namespace App\Providers;
 
-use Dartswoole\Rpc\RpcServerPriovder as ServerProvider;
+use Dartswoole\Help\Debug;
+use Dartswoole\Rpc\RpcServerPriovder as ServerPriovder;
 
-class RpcServerPriovder extends ServerProvider
+class RpcServerPriovder extends ServerPriovder
 {
     protected $services;
 

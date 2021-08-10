@@ -17,3 +17,4 @@ Route::get('rpctest/rpc2', 'RpcTestController@rpc2');
 Route::get('consultest/index', 'ConsulTestController@index');
 Route::get('consultest/services', 'ConsulTestController@services');
 Route::get('consultest/health', 'ConsulTestController@health');
+Route::get('consultest/rpc', 'ConsulTestController@rpc');

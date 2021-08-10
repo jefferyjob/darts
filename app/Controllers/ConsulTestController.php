@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use App\Rpc\Client\TestClient;
+
 class ConsulTestController
 {
     public function index()
@@ -19,12 +21,12 @@ class ConsulTestController
 
     public function health()
     {
-        $result =  app('consul-agent')->health('consul');
+        $result =  app('consul-agent')->health('darts_server');
         return json_encode($result);
     }
 
     public function rpc()
     {
-
+        return (new TestClient())->json();
     }
 }
