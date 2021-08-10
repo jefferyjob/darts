@@ -24,7 +24,7 @@ ab -c 100 -n 1000000 -k http://127.0.0.1:9500/
 
 |  软件   | QPS  | 软件版本  |
 |  ----  | ----  | ----  |
-| darts  | xxx | xxx |
+| darts 1.0 | xxx | xxx |
 | ThinkPHP 6.0  | xxx | xxx |
 | Laravel 8.0  | xxx | xxx |
 
@@ -75,16 +75,17 @@ storage
 
 **该服务的启动后，读取的配置如下：** 
 
-RpcServer   ---read--->    config/rpc_server.php  
-RpcClient   ---read--->    config/rpc_clien.php
+> RpcServer   ---read--->    config/rpc_server.php  
+> RpcClient   ---read--->    config/rpc_clien.php
 
 #### 2、Swoole->Consul->TCP
 
 RpcClient 首先从 consul 服务中读取健康服务的 ip 和端口，然后使用 swoole 的 TCP 协议和 RpcServer 进行通信。   
 
 **该服务的启动后，读取的配置如下：**
-RpcServer   ---read--->    config/rpc_server.php  
-RpcClient   ---read--->    config/consul.php
+
+> RpcServer   ---read--->    config/rpc_server.php  
+> RpcClient   ---read--->    config/consul.php
 
 #### 如何测试RPC
 
