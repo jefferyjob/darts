@@ -24,8 +24,9 @@ ab -c 100 -n 1000000 -k http://127.0.0.1:9500/
 
 |  软件   | QPS  | 软件版本  |
 |  ----  | ----  | ----  |
-| Nginx  | xxx | xxx |
-| PHP7+swoole  | xxx | xxx |
+| darts  | xxx | xxx |
+| ThinkPHP 6.0  | xxx | xxx |
+| Laravel 8.0  | xxx | xxx |
 
 
 ## 目录简介
