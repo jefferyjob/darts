@@ -15,9 +15,11 @@ class StartListener extends Listener
 
         // var_dump("this is  START --- listener handler============");
 
-        Coroutine::create(function (){
-            $this->registerConsul();
-        });
+        if($this->app->make('config')->get('rpc_server.flag')) {
+            Coroutine::create(function (){
+                $this->registerConsul();
+            });
+        }
     }
 
     /**

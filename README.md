@@ -18,7 +18,7 @@ Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
 **服务器环境：**
 
-- centos-7.5 (1核2G)
+- 
 - php-7.2
 
 **压测方法：**
@@ -31,9 +31,9 @@ ab -c 100 -n 1000000 -k http://127.0.0.1:9500/
 
 |  软件   | QPS  | 软件版本  |
 |  ----  | ----  | ----  |
-| darts 1.0 | xxx | xxx |
-| ThinkPHP 6.0  | xxx | xxx |
-| Laravel 8.0  | xxx | xxx |
+| darts 1.0 | 267.39 | centos7.5(1核2G) / php7.2 / swoole4.6 |
+| ThinkPHP 6.0  | xxx | centos7.5(1核2G) / php7.2 / nginx1.18 |
+| Laravel 8.0  | xxx | centos7.5(1核2G) / php7.2 / nginx1.18 |
 
 
 ## 目录简介
@@ -59,16 +59,16 @@ config
 -----rpc_client.php---------项目作为客户端rpc服务配置
 -----rpc_server.php---------项目作为服务端rpc服务配置
 public  
------index.php---------------项目入口文件  
+-----index.php--------------项目入口文件  
 route  
------http.php----------------路由文件  
+-----http.php---------------路由文件  
 storage  
------app---------------------缓存    
------framework---------------缓存  
------logs--------------------缓存    
+-----app--------------------应用缓存    
+-----framework--------------框架缓存  
+-----logs-------------------日志缓存    
 ```
 
-## Http服务
+## HTTP服务
 
 基于 swoole 的 HTTP服务器 实现http协议的解析与处理。
 
@@ -79,34 +79,37 @@ storage
 #### 1、Swoole->TCP
 
 使用 swoole 的 TCP 协议使用 `config/rpc_client.php` 配置的rpc服务， 对 RpcServer 和 RpcClient 进行通信。  
-
-**该服务的启动后，读取的配置如下：** 
-
-> RpcServer   ---read--->    config/rpc_server.php  
-> RpcClient   ---read--->    config/rpc_clien.php
+  
+该服务的启动后，读取的配置如下：  
+- RpcServer   ---read--->    config/rpc_server.php  
+- RpcClient   ---read--->    config/rpc_clien.php
 
 #### 2、Swoole->Consul->TCP
 
 RpcClient 首先从 consul 服务中读取健康服务的 ip 和端口，然后使用 swoole 的 TCP 协议和 RpcServer 进行通信。   
-
-**该服务的启动后，读取的配置如下：**
-
-> RpcServer   ---read--->    config/rpc_server.php  
-> RpcClient   ---read--->    config/consul.php
+  
+该服务的启动后，读取的配置如下：  
+- RpcServer   ---read--->    config/rpc_server.php  
+- RpcClient   ---read--->    config/consul.php
 
 ### 如何测试RPC
 
 **#1测试**
 
-由于 RPC 服务的实现，需要一个客户端（client）和一个服务端（server）。所以对于 darts 项目需要准备两份，一个充当客户端一个充当服务端。
+由于 RPC 服务的实现，需要一个客户端（client）和一个服务端（server）。所以对于 darts 项目需要准备两份，一个充当客户端一个充当服务端。  
 
-- 重新复制一份此项目作为客户端项目
-- 在 config/http_server.php 中修改 port 端口
-- 在 config/rpc_server.php 中关闭 rpc 服务
+
+客户端（client）项目：
+- 在 `config/rpc_server.php` 中 `flag` 设为 `false`，关闭RPC服务
+
+服务端（server）项目：
+- 在 `config/rpc_server.php` 中 `flag` 设为 `true`，关闭RPC服务
+
 
 **#2测试**
 
-该服务的测试不需要进行两个客户端的配置，只需要请求 `route：consultest/rpc` 即可得到rpc效果。
+- 在 `config/rpc_server.php` 中 `flag` 设为 `true`，开启RPC服务
+- 在 `config/dartswoole.php` 中取消 `\Dartswoole\Consul\ConsulServerPriovder::class` 的注释，开放 consul 服务的加载 
 
 
 ## Question

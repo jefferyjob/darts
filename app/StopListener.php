@@ -14,9 +14,11 @@ class StopListener extends Listener
     {
         var_dump("this is  stop --- listener handler");
 
-        Coroutine::create(function (){
-            $this->deregisterService();
-        });
+        if($this->app->make('config')->get('rpc_server.flag')) {
+            Coroutine::create(function (){
+                $this->deregisterService();
+            });
+        }
     }
 
     /**

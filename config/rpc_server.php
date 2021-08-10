@@ -5,7 +5,7 @@
 return array(
 
     // 是否开放rpc服务
-    'flag' => true,
+    'flag' => false,
 
     // 服务类型定义
     'type' => SWOOLE_SOCK_TCP,
