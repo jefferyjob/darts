@@ -14,6 +14,20 @@ Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 - 请先将 Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 `darts` 项目的同级目录
 - 然后执行 `composer update` 安装 `dartswoole` 扩展
 
+## 性能测试
+
+**压测方法：**
+
+```shell
+ab -c 100 -n 1000000 -k http://127.0.0.1:9500/
+```
+
+|  软件   | QPS  | 软件版本  |
+|  ----  | ----  | ----  |
+| Nginx  | xxx | xxx |
+| PHP7+swoole  | xxx | xxx |
+
+
 ## 目录简介
 
 ```text
