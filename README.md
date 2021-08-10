@@ -4,6 +4,11 @@
 
 Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
+## 初次安装
+
+- 请先将 Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 `darts` 项目的同级目录
+- 然后执行 `composer update` 安装 `dartswoole` 扩展
+
 ## 目录简介
 
 ```text
@@ -11,7 +16,7 @@ app
 -----Controller-------------控制器     
 -----Providers--------------服务提供者加载
 -------------------RouteServerProvider--------路由服务提供者自定义扩展
--------------------RpcServerProvider----------RP服务提供者自定义扩展
+-------------------RpcServerProvider----------RPC微服务提供者自定义扩展
 -----Listeners--------------事件监听绑定
 -------------------StartListener--------------swoole启动服务绑定的事件
 -------------------StopListener---------------swoole停止服务绑定的事件
@@ -36,14 +41,9 @@ storage
 -----logs--------------------缓存    
 ```
 
-## 初次安装
-
-- 请先将Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 darts 项目的同级目录
-- 然后执行 composer update 安装 dartswoole 扩展
-
 ## RPC微服务
 
-### darts微服务实现的两种方式 
+### darts中微服务实现的两种方式： 
 
 1、
 
