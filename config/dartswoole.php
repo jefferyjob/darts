@@ -1,9 +1,13 @@
 <?php
 return array(
+    // 注册服务
     "priovders" => [
-        // \Dartswoole\Routes\RouteServerPriovder::class,
-        \App\Providers\RouteServerProvider::class,
 
-        \Dartswoole\Event\EventServerPriovder::class
+        \App\Providers\RouteServerProvider::class,
+        \App\Providers\RpcServerPriovder::class,
+
+        \Dartswoole\Event\EventServerPriovder::class,
+        \Dartswoole\Consul\ConsulServerPriovder::class,
+        \Dartswoole\Rpc\RpcServerPriovder::class,
     ],
 );
