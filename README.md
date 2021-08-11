@@ -12,7 +12,7 @@ Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 ## 初次安装
 
 - 请先将 Library类库 [dartswoole](https://github.com/jefferyjob/dartswoole) 置于 `darts` 项目的同级目录
-- 然后执行 `composer update` 安装 `dartswoole` 扩展
+- 然后执行 `composer install --no-dev` 安装 `dartswoole` 扩展
 
 ## 性能测试
 
