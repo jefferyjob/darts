@@ -8,10 +8,10 @@ Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
 [![php](https://img.shields.io/badge/php-%3E7.0-blue)](https://www.php.net)
 [![swoole](https://img.shields.io/badge/swoole-%3E4.5-blue)](https://www.swoole.com)
-[![issues](https://img.shields.io/github/issues/jefferyjob/darts)](https://github.com/jefferyjob/dartswoole/issues)
-[![GitHub forks](https://img.shields.io/github/forks/jefferyjob/darts)](https://github.com/jefferyjob/dartswoole)
-[![GitHub stars](https://img.shields.io/github/stars/jefferyjob/darts)](https://github.com/jefferyjob/dartswoole)
-[![GitHub license](https://img.shields.io/github/license/jefferyjob/darts)](https://github.com/jefferyjob/dartswoole/blob/master/LICENSE)
+[![issues](https://img.shields.io/github/issues/jefferyjob/darts)](https://github.com/jefferyjob/darts/issues)
+[![GitHub forks](https://img.shields.io/github/forks/jefferyjob/darts)](https://github.com/jefferyjob/darts)
+[![GitHub stars](https://img.shields.io/github/stars/jefferyjob/darts)](https://github.com/jefferyjob/darts)
+[![GitHub license](https://img.shields.io/github/license/jefferyjob/darts)](https://github.com/jefferyjob/darts/blob/master/LICENSE)
 
 ## 初次安装
 
