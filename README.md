@@ -120,4 +120,4 @@ RpcClient 首先从 consul 服务中读取健康服务的 ip 和端口，然后�
 
 ## License
 
-遵循 MIT 许可证，有关详细请参阅 LICENSE ！
+遵循 MIT 许可证, 有关详细请参阅 LICENSE .
