@@ -16,11 +16,6 @@ Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
 ## 性能测试
 
-**服务器环境：**
-
-- 
-- php-7.2
-
 **压测方法：**
 
 ```shell
@@ -109,10 +104,16 @@ RpcClient 首先从 consul 服务中读取健康服务的 ip 和端口，然后�
 **#2测试**
 
 - 在 `config/rpc_server.php` 中 `flag` 设为 `true`，开启RPC服务
-- 在 `config/dartswoole.php` 中取消 `\Dartswoole\Consul\ConsulServerPriovder::class` 的注释，开放 consul 服务的加载 
+- 在 `config/dartswoole.php` 中取消 `Dartswoole\Consul\ConsulServerPriovder::class` 的注释，开放 consul 服务的加载 
 
 
-## Question
+## 相关问题
 
+### 为什么真实连接大于配置的数据库连接数量
 
+在对数据库压测过程中，我们用 `SHOW PROCESSLIST;` 查看数据库的连接数量，会发现真实的连接远大于在配置文件中对于连接池的配置。  
+因为在服务器中，darts 项目启动后，会根据服务器的核心数，启动对应数量的 [Worker](https://wiki.swoole.com/#/server/setting?id=worker_num) 进程，而每个 `Worker` 进程是相互独立的，如果服务器的核心数是 s，数据库进程池中配置的数量是 n，那么查询连接数是 s*n。服务器中查看 Worker 进程的命令是：`pstree -ap | grep darts`
 
+## License
+
+遵循 MIT 许可证，有关详细请参阅 LICENSE。

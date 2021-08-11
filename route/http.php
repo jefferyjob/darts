@@ -1,8 +1,8 @@
 <?php
 use Dartswoole\Routes\Route;
 
-Route::get('index',function () {
-    return 'Welcome Darts';
+Route::get('/',function () {
+    return 'Welcome Darts Framework';
 });
 
 // Dartswoole/Route 测试
@@ -18,3 +18,7 @@ Route::get('consultest/index', 'ConsulTestController@index');
 Route::get('consultest/services', 'ConsulTestController@services');
 Route::get('consultest/health', 'ConsulTestController@health');
 Route::get('consultest/rpc', 'ConsulTestController@rpc');
+
+// 数据库测试
+Route::get('dbtest/test', 'DbTestController@test');
+
