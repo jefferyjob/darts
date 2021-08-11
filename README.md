@@ -4,10 +4,14 @@
 
 Darts Framework 是基于 Swoole 开发的一款高新能的微服务框架
 
-## 环境要求
+## Label
 
-- php-7.2 或更高版本
-- swoole-4.6 或更高版本
+[![php](https://img.shields.io/badge/php-%3E7.0-brightgreen)](https://www.php.net)
+[![swoole](https://img.shields.io/badge/php-%3E4.5-brightgreen)](https://www.swoole.com)
+[![issues](https://img.shields.io/github/issues/jefferyjob/dartswooler)](https://github.com/jefferyjob/dartswoole/issues)
+[![GitHub forks](https://img.shields.io/github/forks/jefferyjob/dartswoole)](https://github.com/jefferyjob/dartswoole)
+[![GitHub stars](https://img.shields.io/github/stars/jefferyjob/dartswoole)](https://github.com/jefferyjob/dartswoole)
+[![GitHub license](https://img.shields.io/github/license/jefferyjob/dartswoole)](https://github.com/jefferyjob/dartswoole/blob/master/LICENSE)
 
 ## 初次安装
 
